@@ -1,6 +1,7 @@
 package ui;
 
 import model.Calculator;
+import model.Operator;
 
 public class CalculatorPresenter {
 
@@ -14,5 +15,11 @@ public class CalculatorPresenter {
 
     public void onDigitPressed (int digit) {
 
+    }
+
+    public void onOperatorPressed(Operator operator) {
+    }
+
+    public void onDotPressed() {
     }
 }

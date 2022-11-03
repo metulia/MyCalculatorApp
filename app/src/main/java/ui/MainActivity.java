@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import model.CalculatorImpl;
+import model.Operator;
 
 public class MainActivity extends AppCompatActivity implements CalculatorView {
 
@@ -29,16 +30,16 @@ public class MainActivity extends AppCompatActivity implements CalculatorView {
         presenter = new CalculatorPresenter(this, new CalculatorImpl());
 
         Map<Integer, Integer> digits = new HashMap<>();
-        digits.put(R.id.one, 1);
-        digits.put(R.id.two, 2);
-        digits.put(R.id.three, 3);
-        digits.put(R.id.four, 4);
-        digits.put(R.id.five, 5);
-        digits.put(R.id.six, 6);
-        digits.put(R.id.seven, 7);
-        digits.put(R.id.eight, 8);
-        digits.put(R.id.nine, 9);
-        digits.put(R.id.zero, 0);
+        digits.put(R.id.key_1, 1);
+        digits.put(R.id.key_2, 2);
+        digits.put(R.id.key_3, 3);
+        digits.put(R.id.key_4, 4);
+        digits.put(R.id.key_5, 5);
+        digits.put(R.id.key_6, 6);
+        digits.put(R.id.key_7, 7);
+        digits.put(R.id.key_8, 8);
+        digits.put(R.id.key_9, 9);
+        digits.put(R.id.key_0, 0);
 
         View.OnClickListener digitClickListener = new View.OnClickListener() {
             @Override
@@ -47,16 +48,41 @@ public class MainActivity extends AppCompatActivity implements CalculatorView {
             }
         };
 
-        findViewById(R.id.one).setOnClickListener(digitClickListener);
-        findViewById(R.id.two).setOnClickListener(digitClickListener);
-        findViewById(R.id.three).setOnClickListener(digitClickListener);
-        findViewById(R.id.four).setOnClickListener(digitClickListener);
-        findViewById(R.id.five).setOnClickListener(digitClickListener);
-        findViewById(R.id.six).setOnClickListener(digitClickListener);
-        findViewById(R.id.seven).setOnClickListener(digitClickListener);
-        findViewById(R.id.eight).setOnClickListener(digitClickListener);
-        findViewById(R.id.nine).setOnClickListener(digitClickListener);
-        findViewById(R.id.zero).setOnClickListener(digitClickListener);
+        findViewById(R.id.key_1).setOnClickListener(digitClickListener);
+        findViewById(R.id.key_2).setOnClickListener(digitClickListener);
+        findViewById(R.id.key_3).setOnClickListener(digitClickListener);
+        findViewById(R.id.key_4).setOnClickListener(digitClickListener);
+        findViewById(R.id.key_5).setOnClickListener(digitClickListener);
+        findViewById(R.id.key_6).setOnClickListener(digitClickListener);
+        findViewById(R.id.key_7).setOnClickListener(digitClickListener);
+        findViewById(R.id.key_8).setOnClickListener(digitClickListener);
+        findViewById(R.id.key_9).setOnClickListener(digitClickListener);
+        findViewById(R.id.key_0).setOnClickListener(digitClickListener);
+
+        Map<Integer, Operator> operators = new HashMap<>();
+        operators.put(R.id.key_plus, Operator.ADDITION);
+        operators.put(R.id.key_minus, Operator.SUBTRACTION);
+        operators.put(R.id.key_multiply, Operator.MULTIPLICATION);
+        operators.put(R.id.key_divide, Operator.DIVISION);
+
+        View.OnClickListener operatorsClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                presenter.onOperatorPressed(operators.get(view.getId()));
+            }
+        };
+
+        findViewById(R.id.key_plus).setOnClickListener(operatorsClickListener);
+        findViewById(R.id.key_minus).setOnClickListener(operatorsClickListener);
+        findViewById(R.id.key_multiply).setOnClickListener(operatorsClickListener);
+        findViewById(R.id.key_divide).setOnClickListener(operatorsClickListener);
+
+        findViewById(R.id.key_dot).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                presenter.onDotPressed();
+            }
+        });
 
     }
 
