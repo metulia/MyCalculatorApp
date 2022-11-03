@@ -11,4 +11,8 @@ public class CalculatorPresenter {
         this.view = view;
         this.calculator = calculator;
     }
+
+    public void onDigitPressed (int digit) {
+
+    }
 }
