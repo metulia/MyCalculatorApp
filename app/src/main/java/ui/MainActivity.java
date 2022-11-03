@@ -7,9 +7,13 @@ import android.widget.Button;
 
 import com.example.mycalculatorapp.R;
 
+import model.CalculatorImpl;
+
 public class MainActivity extends AppCompatActivity implements CalculatorView {
 
     private Button resultTxt;
+
+    private CalculatorPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +21,8 @@ public class MainActivity extends AppCompatActivity implements CalculatorView {
         setContentView(R.layout.activity_main);
 
         resultTxt = findViewById(R.id.outcome);
+
+        presenter = new CalculatorPresenter(this, new CalculatorImpl());
     }
 
     @Override
