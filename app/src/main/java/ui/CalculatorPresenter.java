@@ -1,12 +1,15 @@
 package ui;
 
+import java.text.DecimalFormat;
+
 import model.Calculator;
 import model.Operator;
 
 public class CalculatorPresenter {
 
-    private CalculatorView view;
-    private Calculator calculator;
+    private final CalculatorView view;
+    private final Calculator calculator;
+    private DecimalFormat decimalFormat = new DecimalFormat();
     private double argOne;
     private Double argTwo;
     private Operator selectedOperator;
@@ -20,10 +23,10 @@ public class CalculatorPresenter {
 
         if (argTwo == null) {
             argOne = argOne * 10 + digit;
-            view.showResult(String.valueOf(argOne));
+            showFormatted(argOne);
         } else {
             argTwo = argTwo * 10 + digit;
-            view.showResult(String.valueOf(argTwo));
+            showFormatted(argTwo);
         }
 
     }
@@ -31,12 +34,19 @@ public class CalculatorPresenter {
     public void onOperatorPressed(Operator operator) {
         if (selectedOperator != null) {
             argOne = calculator.calculate(argOne, argTwo, selectedOperator);
-            view.showResult(String.valueOf(argOne));
+            showFormatted(argOne);
         }
         argTwo = 0.0;
         selectedOperator = operator;
     }
 
     public void onDotPressed() {
+    }
+
+    public void onResultPressed() {
+    }
+
+    private void showFormatted(double value) {
+        view.showResult(decimalFormat.format(value));
     }
 }
