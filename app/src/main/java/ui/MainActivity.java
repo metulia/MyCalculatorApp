@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements CalculatorView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        resultTxt = findViewById(R.id.outcome);
+        resultTxt = findViewById(R.id.your_result);
 
         presenter = new CalculatorPresenter(this, new CalculatorImpl());
 

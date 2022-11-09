@@ -6,6 +6,19 @@
     android:useDefaultMargins="true">
 
     <Button
+        android:id="@+id/your_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="3"
+        android:layout_gravity="fill_horizontal" />
+
+    <Button
+        android:id="@+id/del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_del" />
+
+    <Button
         android:id="@+id/key_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -100,22 +113,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/key_divide" />
-
-    <Button
-        android:id="@+id/your_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_columnSpan="2"
-        android:layout_gravity="fill_horizontal"
-        android:text="@string/your_result"
-        android:textSize="9sp" />
-
-    <Button
-        android:id="@+id/outcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_columnSpan="2"
-        android:layout_gravity="fill_horizontal"
-        android:textSize="10sp"/>
 
 </GridLayout>

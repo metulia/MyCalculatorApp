@@ -16,5 +16,5 @@
     <string name="key_minus">-</string>
     <string name="key_multiply">*</string>
     <string name="key_divide">/</string>
-    <string name="your_result">Результат вычисления</string>
+    <string name="key_del">C</string>
 </resources>
