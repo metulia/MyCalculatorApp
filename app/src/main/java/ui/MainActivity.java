@@ -91,6 +91,14 @@ public class MainActivity extends AppCompatActivity implements CalculatorView {
             }
         });
 
+        findViewById(R.id.key_del).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                presenter.onDelPressed();
+                resultTxt.setText("0");
+            }
+        });
+
     }
 
     @Override

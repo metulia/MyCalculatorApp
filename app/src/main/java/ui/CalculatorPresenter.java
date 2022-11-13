@@ -13,6 +13,7 @@ public class CalculatorPresenter {
     private double argOne;
     private Double argTwo;
     private Operator selectedOperator;
+    private Double result;
 
     public CalculatorPresenter(CalculatorView view, Calculator calculator) {
         this.view = view;
@@ -28,7 +29,6 @@ public class CalculatorPresenter {
             argTwo = argTwo * 10 + digit;
             showFormatted(argTwo);
         }
-
     }
 
     public void onOperatorPressed(Operator operator) {
@@ -44,9 +44,18 @@ public class CalculatorPresenter {
     }
 
     public void onResultPressed() {
+        if (selectedOperator != null) {
+            argOne = calculator.calculate(argOne, argTwo, selectedOperator);
+            showFormatted(argOne);
+        }
+        argTwo = 0.0;
     }
 
     private void showFormatted(double value) {
         view.showResult(decimalFormat.format(value));
+    }
+
+    public void onDelPressed() {
+        argOne = 0.0;
     }
 }
