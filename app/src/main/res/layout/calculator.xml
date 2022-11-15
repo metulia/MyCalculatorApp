@@ -6,116 +6,112 @@
     android:useDefaultMargins="true">
 
     <Button
-        android:id="@+id/one"
+        android:id="@+id/your_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="3"
+        android:layout_gravity="fill_horizontal" />
+
+    <Button
+        android:id="@+id/key_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_del" />
+
+    <Button
+        android:id="@+id/key_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/key_1" />
 
     <Button
-        android:id="@+id/two"
+        android:id="@+id/key_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/key_2" />
 
     <Button
-        android:id="@+id/three"
+        android:id="@+id/key_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/key_3" />
 
     <Button
-        android:id="@+id/plus"
+        android:id="@+id/key_plus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/key_plus" />
 
     <Button
-        android:id="@+id/four"
+        android:id="@+id/key_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/key_4" />
 
     <Button
-        android:id="@+id/five"
+        android:id="@+id/key_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/key_5" />
 
     <Button
-        android:id="@+id/six"
+        android:id="@+id/key_6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/key_6" />
 
     <Button
-        android:id="@+id/minus"
+        android:id="@+id/key_minus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/key_minus" />
 
     <Button
-        android:id="@+id/seven"
+        android:id="@+id/key_7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/key_7" />
 
     <Button
-        android:id="@+id/eight"
+        android:id="@+id/key_8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/key_8" />
 
     <Button
-        android:id="@+id/nine"
+        android:id="@+id/key_9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/key_9" />
 
     <Button
-        android:id="@+id/multiply"
+        android:id="@+id/key_multiply"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/key_multiply" />
 
     <Button
-        android:id="@+id/zero"
+        android:id="@+id/key_0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/key_0" />
 
     <Button
-        android:id="@+id/dot"
+        android:id="@+id/key_dot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/key_dot" />
 
     <Button
-        android:id="@+id/res"
+        android:id="@+id/key_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/key_result" />
 
     <Button
-        android:id="@+id/div"
+        android:id="@+id/key_divide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/key_divide" />
-
-    <Button
-        android:id="@+id/calc_res"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_columnSpan="2"
-        android:layout_gravity="fill_horizontal"
-        android:text="@string/your_result"
-        android:textSize="9sp" />
-
-    <Button
-        android:id="@+id/outcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_columnSpan="2"
-        android:layout_gravity="fill_horizontal"
-        android:text="" />
 
 </GridLayout>
