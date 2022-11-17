@@ -13,7 +13,6 @@ public class CalculatorPresenter {
     private double argOne;
     private Double argTwo;
     private Operator selectedOperator;
-    private Double result;
 
     public CalculatorPresenter(CalculatorView view, Calculator calculator) {
         this.view = view;
