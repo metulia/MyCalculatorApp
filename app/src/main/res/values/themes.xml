@@ -13,4 +13,12 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="MyStyle" parent="Theme.MyCalculatorApp">
+        <item name="android:textSize">@dimen/tSize</item>
+        <item name="android:textColor">@color/violent_red</item>
+        <item name="fontFamily">sans-serif-black</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:backgroundTint">@color/dark_red</item>
+    </style>
 </resources>

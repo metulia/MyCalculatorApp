@@ -3,14 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:columnCount="4"
+    android:theme="@style/MyStyle"
     android:useDefaultMargins="true">
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/your_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnSpan="3"
-        android:layout_gravity="fill_horizontal" />
+        android:layout_gravity="fill_horizontal"
+        android:backgroundTint="@color/black" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_del"
